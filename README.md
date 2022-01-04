@@ -19,20 +19,20 @@ This library is not yet available in the Maven central repository, so the packag
 A `Translator` class is used for accessing the web service endpoint by the end-user.
 The constructors of this class use the received parameters to specify the desired input and output languages.
 Also, a `Language` enum is recommended to use for managing the language codes used to instantiate it.
-```
+```java
 Translator t = new Translator(Language.POLISH, Language.ENGLISH);
 assertEquals(t.translate("Jan ma kota."), "John has a cat.");
 ```
 A string language code can also be used instead, but this approach is more prone to error as passing an invalid string will result in IllegalArgumentException being thrown.
 Check the `Language` enum for information about the corresponding code of each language.
-```
+```java
 Translator t1 = new Translator("pl", "en");
 // Same as
 Translator t2 = new Translator(Language.POLISH.toString(), Language.ENGLISH.toString());
 ```
 A single argument constructor can be used for input language detection, or for the same result set the first parameter of the constructor to Language.AUTO or an empty string.
 This will let the translation service automatically detect the language in which given text is written in.
-```
+```java
 // All of those translator objects are equivalent
 Translator t1 = new Translator(Language.ENGLISH);
 Translator t2 = new Translator(Language.AUTO, Language.ENGLISH);
