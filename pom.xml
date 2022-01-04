@@ -12,6 +12,7 @@
   <description>A lightweight and flexible library providing a rate-limit-free translation service access.</description>
   <url>https://github.com/matbia/ddg-translate</url>
   <inceptionYear>2022</inceptionYear>
+
   <licenses>
     <license>
       <name>The GNU General Public License, Version 3</name>
@@ -19,6 +20,7 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
   <developers>
     <developer>
       <name>Mateusz Biały</name>
@@ -26,6 +28,12 @@
       <timezone>Europe/Warsaw</timezone>
     </developer>
   </developers>
+
+  <scm>
+    <connection>scm:git:git@github.com:matbia/ddg-translate.git</connection>
+    <developerConnection>scm:git:ssh://github.com:matbia/ddg-translate.git</developerConnection>
+    <url>https://github.com/matbia/ddg-translator/tree/master</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
