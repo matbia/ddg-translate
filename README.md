@@ -14,7 +14,7 @@ The vqd token is extracted from HTML and is updated once a translation request f
 
 This library is not yet available in the Maven central repository, so the package needs to be manually compiled and imported into the project.
 
-### Usage
+## Usage
 
 A `Translator` class is used for accessing the web service endpoint by the end-user.
 The constructors of this class use the received parameters to specify the desired input and output languages.
