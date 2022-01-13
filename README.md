@@ -30,7 +30,7 @@ Translator t1 = new Translator("pl", "en");
 // Same as
 Translator t2 = new Translator(Language.POLISH.toString(), Language.ENGLISH.toString());
 ```
-A single argument constructor can be used for input language detection, or for the same result set the first parameter of the constructor to Language.AUTO or an empty string.
+A single argument constructor can be used for input language detection, or for the same result set the first parameter of the constructor to Language.AUTO, or just "auto" as a string.
 This will let the translation service automatically detect the language in which given text is written in.
 ```java
 // All of those translator objects are equivalent
