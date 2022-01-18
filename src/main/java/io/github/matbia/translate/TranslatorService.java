@@ -18,9 +18,10 @@ import java.util.regex.Pattern;
 final class TranslatorService {
     private static TranslatorService instance;
     private static final Logger LOGGER = Logger.getLogger(TranslatorService.class.getName());
-    private static final HttpClient httpClient = HttpClient.newBuilder().build();
     private static final String BASE_URL = "https://duckduckgo.com",
             USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0";
+    private final HttpClient httpClient;
+
     /**
      * A token found in a script tag inside the head element of every search results HTML page.
      * It's required as a parameter for accessing the /translation.js endpoint.
@@ -28,9 +29,10 @@ final class TranslatorService {
     private String vqdToken;
 
     /**
-     * Initial vqd token is fetched when the class is instantiated.
+     * Constructor builds the HttpClient instance and fetches the initial vqd token.
      */
     private TranslatorService() {
+        httpClient = HttpClient.newBuilder().build();
         try {
             vqdToken = getVqdToken();
         } catch (IOException | InterruptedException e) {
